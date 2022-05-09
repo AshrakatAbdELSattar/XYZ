@@ -1,10 +1,11 @@
 package com.company;
 
-public class employee{
-   private int emp_id, salary;
-   private String FristName,LastName;
-   private int dep_id;
-   department dep;
+public class employee {
+    private int emp_id, salary;
+    private String FristName;
+    private String LastName;
+    private int dep_id;
+    Department dep;
 
 
     public void setEmp_id(int emp_id) {
@@ -55,9 +56,9 @@ public class employee{
                 " , salary = " +
                 salary +
                 " , Department ID = "
-                + dep_id  +
-                " ] " ;
-         //return "[ id = " + emp_id  ;
+                + dep_id +
+                " ] ";
+        //return "[ id = " + emp_id  ;
     }
 
 

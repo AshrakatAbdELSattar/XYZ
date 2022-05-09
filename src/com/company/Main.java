@@ -1,13 +1,11 @@
 package com.company;
 
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
         Scanner sc= new Scanner (System.in);
-        department dep1 = new department();
+        Department dep1 = new Department();
         int choise ;
         do{
             System.out.println(" 1 : To Add the Department  ");
