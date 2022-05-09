@@ -1,10 +1,11 @@
 package com.company;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-public class department {
-   private int dep_id;
+public class Department {
+   private Integer depId;
    private String name;
-   private ArrayList<employee> list = new ArrayList<employee>();
+   private List<employee> list = new ArrayList<employee>();
 
      public void setDep_id(int dep_id) {
           this.dep_id = dep_id;
@@ -22,17 +23,24 @@ public class department {
           return name;
      }
 
-     public void add_emp(int id,String FN,String LN ,int Sal , int Did){
+     public void add_emp(int id,String firstName,String lastName ,int Sal , int Did) {
          employee e = new employee() ;
          Scanner sc= new Scanner (System.in);
-         if(list.size()==0){
-              e.setEmp_id(id); e.setFristName(FN); e.setLastName(LN); e.setSalary(Sal); e.setDep_id(Did);
+         if(list.size()==0) {
+              e.setEmp_id(id);
+              e.setFristName(firstName);
+              e.setLastName(lastName);
+              e.setSalary(Sal);
+              e.setDep_id(Did);
+
               System.out.println("Note that this is the first employee in this department with ID 1,The ID sequential and in ascending order ");
               list.add(0,e);
             System.out.println(list.size());
           }
           else if(id==list.size()+1) {
-              e.setEmp_id(id); e.setFristName(FN); e.setLastName(LN); e.setSalary(Sal); e.setDep_id(Did);
+              e.setEmp_id(id);
+              e.setFristName(firstName);
+              e.setLastName(lastName); e.setSalary(Sal); e.setDep_id(Did);
               list.add(e);
           }
           else if(id!=list.size()+1){
@@ -40,7 +48,7 @@ public class department {
                       "And The ID sequential and in ascending order");
               System.out.print("Enter The correct id :");
                id =sc.nextInt();
-             e.setEmp_id(id); e.setFristName(FN); e.setLastName(LN); e.setSalary(Sal); e.setDep_id(Did);
+             e.setEmp_id(id); e.setFristName(firstName); e.setLastName(lastName); e.setSalary(Sal); e.setDep_id(Did);
              list.add(e);
 
            }
